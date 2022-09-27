@@ -8,14 +8,14 @@ app.use(cors())
 
 //destructure functions from controller.js
 const {
-    getItems,
-    addItem,
-    deleteItem
+    getLists,
+    addList,
+    deleteList
 } = require('./controller')
 
 //add endpoints
-app.get('/getItems', getItems)
-app.post('/addItem', addItem)
-app.delete('/deleteItem/:id', deleteItem)
+app.get('/getLists', getLists)
+app.post('/addList', addList)
+app.delete('/deleteList/:id', deleteList)
 
 app.listen(4875, () => console.log('Listening on port 4875'))

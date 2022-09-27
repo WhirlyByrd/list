@@ -1,33 +1,33 @@
-const items = require('./db.json')
-let itemId = 2
+const lists = require('./db.json')
+let listId = 3
 
 
 module.exports = {
 
     //get items
-    getItems: (req, res) => {
-        res.status(200).send(items)
+    getLists: (req, res) => {
+        res.status(200).send(lists)
     },
 
-    addItem: (req, res) => {
+    addList: (req, res) => {
         //destructure item list
-        const {item} = req.body
+        const {name} = req.body
 
-        let addItemObject = {
-            id: itemId,
-            item: item
+        let addListObject = {
+            id: listId,
+            name: name
         }
 
-        items.push(addItemObject)
-        itemId++
-        res.status(200).send(items)
+        lists.push(addListObject)
+        listId++
+        res.status(200).send(lists)
     },
 
-    deleteItem: (req, res) => {
-        const index = items.findIndex(el => el.id === +req.params.id)
+    deleteList: (req, res) => {
+        const index = lists.findIndex(el => el.id === +req.params.id)
        
-        items.splice(index, 1)
+        lists.splice(index, 1)
 
-       res.status(200).send(items)
+       res.status(200).send(lists)
     }
 }
