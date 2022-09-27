@@ -10,12 +10,19 @@ app.use(cors())
 const {
     getLists,
     addList,
-    deleteList
+    deleteList,
+    getItems,
+    addItem,
+    deleteItem
 } = require('./controller')
 
 //add endpoints
 app.get('/getLists', getLists)
 app.post('/addList', addList)
 app.delete('/deleteList/:id', deleteList)
+
+app.get('/getItems', getItems)
+app.post('/addItem', addItem)
+app.delete('/deleteItem/:id', deleteItem)
 
 app.listen(4875, () => console.log('Listening on port 4875'))
