@@ -150,7 +150,8 @@ const addItem = () => {
 
 
 addListBtn.addEventListener('click', addList)
-addItemBtn.addEventListener('click', addItem)
+//addItemBtn.addEventListener('click', addItem)
 
 getAllLists()
 getAllItems()
+//addItemBtn.addEventListener('click', addItem)
