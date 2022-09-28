@@ -52,8 +52,15 @@ const createItemCard = (item) => {
     itemCard.classList.add('item-card')
 
     itemCard.innerHTML = `
-    <section>
-    <p>${item.item} <button onclick="deleteItem(${item.id})">X</button></p>
+    <section id="itemRow">
+    
+    <label for=${item.id}>
+    <input onclick="updateStatus(this)" type=checkbox id="${item.id}">
+    <p>${item.item}</p>
+    </label>
+    <button onclick="deleteItem(${item.id})">X</button>
+    
+    
     </section>
 
 
@@ -61,6 +68,16 @@ const createItemCard = (item) => {
     `
     let showItems = document.querySelector(`#itemDisplay${item.listId}`)
     showItems.appendChild(itemCard)
+}
+
+function updateStatus(selectedTask){
+    //getting paragragh that contains item
+    let itemName = selectedTask.parentElement.lastElementChild
+    if(selectedTask.checked) {
+        itemName.classList.add("checked");
+    }else {
+        itemName.classList.remove("checked")
+    }
 }
 
 //axios request to get lists array

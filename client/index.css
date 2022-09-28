@@ -122,10 +122,18 @@ main {
 }
 
 .list-card {
-    background-color: #e1e1e1;
+    background-color: #a1a1a1;
     padding: 2%;
-    margin-top: 5%;
+    margin-top: 5%;   
+}
+
+ #itemRow {
+   
     
+}
+
+label p.checked {
+    text-decoration: line-through;
 }
 
 
