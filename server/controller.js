@@ -2,7 +2,7 @@ const lists = require('./db.json')
 let listId = 3
 
 const items = require('./db2.json')
-let itemId = 3
+let itemId = 4
 
 
 module.exports = {
@@ -45,11 +45,12 @@ module.exports = {
 
     addItem: (req, res) => {
         //destructure item list
-        const {item} = req.body
+        const {item, key} = req.body
 
         let addItemObject = {
+            listId: `${key}`,
             id: itemId,
-            item: item
+            item: `${item}`
         }
 
         items.push(addItemObject)

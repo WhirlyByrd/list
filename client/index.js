@@ -35,8 +35,8 @@ const createListCard = (list) => {
      <section id="itemDisplay${list.id}"></section>
 
      <section id="add-item">
-            <input type="text" id="itemInput" placeholder="Add a new to-do"/>
-            <button id="addItemBtn">Add</button>
+            <input type="text" id="itemInput${list.id}" placeholder="Add a new to-do"/>
+            <button id="addItemBtn" onclick="addItem(${list.id})">Add</button>
     </section>  
     `
     
@@ -56,9 +56,10 @@ const createItemCard = (item) => {
     <p>${item.item} <button onclick="deleteItem(${item.id})">X</button></p>
     </section>
 
+
     
     `
-    const showItems = document.querySelector(`#itemDisplay${item.listId}`)
+    let showItems = document.querySelector(`#itemDisplay${item.listId}`)
     showItems.appendChild(itemCard)
 }
 
@@ -104,8 +105,12 @@ const deleteList = (id) => {
 const deleteItem = (id) => {
     axios.delete(`${baseUrl}/deleteItem/${id}`)
     .then((res) => {
-        showItems.innerHTML = ''
-        displayItems(res.data)
+        showLists.innerHTML = ''
+
+        getAllLists()
+        getAllItems()
+
+        //displayItems(res.data)
     })
 }
 
@@ -128,20 +133,25 @@ const addList = () => {
 
 //add new item
 
-const addItem = () => {
-    let itemInput = document.querySelector('#itemInput')
+const addItem = (listId) => {
+    let itemInput = document.querySelector(`#itemInput${listId}`)
     
 
     let newItem = {
+        key: listId,
         item: itemInput.value
     }
 
     axios.post(`${baseUrl}/addItem`, newItem)
     .then((res) => {
-        showItems.innerHTML = ''
+
+        showLists.innerHTML = ''
         itemInput.value = ''
 
-        displayItems(res.data)
+        getAllLists()
+        getAllItems()
+
+        //displayItems(res.data)
     })
 
     
