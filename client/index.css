@@ -96,7 +96,7 @@ main {
 }
 
 #add-list input {
-    height: 30px;
+    height: 40px;
     width: 30%;
     margin-right: 20px;
     border-radius: 7px;
@@ -112,7 +112,7 @@ main {
     border: none;
     color: white;
     background-color: #69BFA0;
-    height:30px;
+    height:40px;
     font-size: 20px;
    cursor: pointer;
 
@@ -215,13 +215,12 @@ main {
 
 
 
+
 label p {
     padding-left: 5px;
     font-family: Roboto, sans-serif;
     font-size: 15px;
 }
-
-
 
 
 
