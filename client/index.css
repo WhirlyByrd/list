@@ -77,6 +77,8 @@ header h1 {
     font-size: 40px;
     font-weight: bold;
     color: rgb(37, 37, 37);
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 main {
