@@ -1,16 +1,16 @@
 [
     {
         "id": 1,
-        "name": "My First List."
+        "name": "Daily Chores"
     },
 
     {
         "id": 2,
-        "name": "My Second List"
+        "name": "Workout"
     },
 
     {
         "id": 3,
-        "name": "My Third List"
+        "name": "Homework"
     }
 ]

@@ -50,7 +50,7 @@ table {
 body {
     display: flex;
     flex-wrap: wrap;
-    background:#f1f1f1 ;
+    background:#dddddd ;
 
 }
 
@@ -76,6 +76,7 @@ header h1 {
     font-family: 'Roboto';
     font-size: 40px;
     font-weight: bold;
+    color: rgb(37, 37, 37);
 }
 
 main {
@@ -95,22 +96,26 @@ main {
 }
 
 #add-list input {
-    height: 25px;
+    height: 30px;
     width: 30%;
     margin-right: 20px;
     border-radius: 7px;
-    border: 1px solid grey;
+    border: 1px solid rgb(213, 213, 213);
+    padding-left: 15px;
    
   
 }
 
 #add-list button {
     width:20%;
-    padding:6px;
     border-radius: 7px;
-    border: 1px solid green;
+    border: none;
     color: white;
-    background-color: green;
+    background-color: #69BFA0;
+    height:30px;
+    font-size: 20px;
+   cursor: pointer;
+
 }
 
 #listDisplay {
@@ -134,17 +139,13 @@ main {
     width:250px;
     flex-flow: wrap;
     border-radius: 7px;
+    
  
       
 }
 
 .list-card section {
-    width: 100%;
-  
-    
-    
-    
-    
+    width: 100%;        
 }
 
 .list-card button {
@@ -154,10 +155,14 @@ main {
 
 
 #list-name {
-    background-color: aquamarine;
+    background-color: #F2BF27;
     padding: 15px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    color:37 37 37;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     
 }
 
@@ -165,29 +170,41 @@ main {
     float: right;
     cursor: pointer;
     border-radius: 5px;
-    padding: 5px 10px 5px 10px;
+    padding: 0px 10px 0px 0px; 
     border-style: none;
-    color: white;
-    background-color: red;
+    color: #D90416;
+    background-color: #F2BF27;
+    font-size: 22px;
+    font-weight: 800;
 }
 
 .item-card section {
-  width: 100%;
+  width: 90%;
   display: flex;
-  
   align-items:center;
   justify-content: space-between;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #ccc;
+  padding-left: 5%;
+  padding-right: 5%;
+  
    
 }
 
 
 .item-card button {
     float: right;
-    
+    float: right;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px; 
+    border-style: none;
+    color: #D90416;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 800;
+       
 }
 
 .item-card label {
@@ -201,7 +218,7 @@ main {
 label p {
     padding-left: 5px;
     font-family: Roboto, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
@@ -218,21 +235,42 @@ label p.checked {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width:100%;
+    background-color: #69BFA0;
+    border-radius: 0% 0% 7% 7%;
+    height:40px;
+    color: white;
+    
 }
 
 #add-item input{
-    width: 70%;
-    height: 25px;
-    border-radius: 5px;
-    border-style: 1px solid grey ;
+    border-radius: 5px 5px 5px 5px;
+    border-style: none ;
+    padding-left: 5%;
+    width:70%;
+    background-color: #69BFA0;
+    color: white;
 }
+
+#add-item ::placeholder {
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+ 
+
 
 #add-item button {
     float: right;
     color: white;
-    background-color: green;
-    border-style: 1px solid green;
-    padding-left: 7px 15px;
+    font-size: 30px;
+    background-color: #69BFA0;
+    border-style: none;
+    padding-right:8%;
+    
+    border-radius: 0px 0px 5px 0px;
+    
 }
 
 

@@ -30,13 +30,13 @@ const createListCard = (list) => {
 
     listCard.innerHTML = `
     <section id="list-name">
-    <p>${list.name} <button onclick="deleteList(${list.id})">X</button></p>
+    <p>${list.name} <button onclick="deleteList(${list.id})">x</button></p>
       </section>
      <section id="itemDisplay${list.id}"></section>
 
      <section id="add-item">
             <input type="text" id="itemInput${list.id}" placeholder="Add a new to-do"/>
-            <button id="addItemBtn" onclick="addItem(${list.id})">Add</button>
+            <button id="addItemBtn" onclick="addItem(${list.id})">+</button>
     </section>  
     `
     

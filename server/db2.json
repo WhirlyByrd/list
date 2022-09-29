@@ -2,19 +2,30 @@
     {
         "listId": "1",
         "id": "1",
-        "item":"This is my first to-do"
+        "item":"Dishes"
+    },
+    {
+        "listId": "1",
+        "id": "2",
+        "item":"Sweep"
+    },
+
+    {
+        "listId": "1",
+        "id": "3",
+        "item":"Mop"
     },
 
     {
         "listId": "2",
         "id": "2",
-        "item": "This is my second to-do"
+        "item": "30min walk"
     },
 
     {
         "listId": "2",
         "id": "3",
-        "item": "test"
+        "item": "5 sets of squats"
     }
 
 ]
