@@ -29,7 +29,7 @@ const createListCard = (list) => {
     listCard.classList.add('list-card')
 
     listCard.innerHTML = `
-    <section>
+    <section id="list-name">
     <p>${list.name} <button onclick="deleteList(${list.id})">X</button></p>
       </section>
      <section id="itemDisplay${list.id}"></section>
@@ -67,6 +67,7 @@ const createItemCard = (item) => {
     
     `
     let showItems = document.querySelector(`#itemDisplay${item.listId}`)
+    
     showItems.appendChild(itemCard)
 }
 

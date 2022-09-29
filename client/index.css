@@ -116,26 +116,94 @@ main {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: space-around;
+    width: 100%;
 
 }
 
 .list-card {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #a1a1a1;
-    padding: 2%;
-    margin-top: 5%;   
+    align-items: flex-start;
+    height:fit-content;
+    margin-top: 5%;
+    width: 25%;
+ 
+      
 }
 
- #itemRow {
-   
+.list-card section {
+    width: 100%;
+  
+    
+    
+    
     
 }
 
-label p.checked {
-    text-decoration: line-through;
+.list-card button {
+    float: right;
+    cursor: pointer;
 }
 
+
+#list-name {
+    background-color: aquamarine;
+    padding: 5px 5px 5px 5px;
+    
+}
+
+#list-name button {
+    float: right;
+    cursor: pointer;
+}
+
+.item-card section {
+  width: 100%;
+  display: flex;
+  
+  align-items:center;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
+   
+}
+
+.item-card button {
+    float: right;
+    
+}
+
+.item-card label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label p {
+    padding-left: 5px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+
+label p.checked {
+    text-decoration: line-through;
+    
+   
+}
+
+#add-item {
+    
+}
+
+#add-item button {
+    float: right;
+}
 
 
 
