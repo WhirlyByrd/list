@@ -258,6 +258,7 @@ label p.checked {
 }
 #add-item input:focus {
     outline: none;
+    
 }
 
 #add-item ::placeholder {
