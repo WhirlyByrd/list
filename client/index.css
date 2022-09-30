@@ -50,7 +50,7 @@ table {
 body {
     display: flex;
     flex-wrap: wrap;
-    background:#dddddd ;
+    background:#2d2d2d ;
 
 }
 
@@ -75,8 +75,8 @@ header h1 {
     align-items: center;
     font-family: 'Roboto';
     font-size: 40px;
-    font-weight: bold;
-    color: rgb(37, 37, 37);
+    font-weight: 900;
+    color: rgb(255, 255, 255);
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -101,8 +101,8 @@ main {
     height: 40px;
     width: 30%;
     margin-right: 20px;
-    border-radius: 7px;
-    border: 1px solid rgb(213, 213, 213);
+    border-radius: 10px;
+    border-style: none;
     padding-left: 15px;
    
   
@@ -110,14 +110,19 @@ main {
 
 #add-list button {
     width:20%;
-    border-radius: 7px;
+    border-radius: 10px;
     border: none;
     color: white;
-    background-color: #69BFA0;
-    height:40px;
+    background-color: #F25CA2;
+    height:43px;
     font-size: 20px;
-   cursor: pointer;
+    font-weight: 800;
+    cursor: pointer;
+}
 
+#add-list button:hover {
+    border-style: none;
+    background-color: #576EF2;
 }
 
 #listDisplay {
@@ -138,12 +143,10 @@ main {
     align-items: flex-start;
     height:fit-content;
     margin-top: 5%;
-    width:250px;
+    width:300px;
     flex-flow: wrap;
-    border-radius: 7px;
-    
- 
-      
+    border-radius: 10px;    
+    background: none; 
 }
 
 .list-card section {
@@ -157,14 +160,15 @@ main {
 
 
 #list-name {
-    background-color: #F2BF27;
+    background-color: #576EF2;
     padding: 15px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color:37 37 37;
     font-family: Roboto, sans-serif;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
+    color: white;
     
 }
 
@@ -174,10 +178,10 @@ main {
     border-radius: 5px;
     padding: 0px 10px 0px 0px; 
     border-style: none;
-    color: #D90416;
-    background-color: #F2BF27;
+    color: white;
+    background-color:  #576EF2;
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .item-card section {
@@ -190,6 +194,7 @@ main {
   border-bottom: 1px solid #ccc;
   padding-left: 5%;
   padding-right: 5%;
+  background-color: white;
   
    
 }
@@ -199,10 +204,9 @@ main {
     float: right;
     float: right;
     cursor: pointer;
-    border-radius: 5px;
     padding: 5px 10px 5px 10px; 
     border-style: none;
-    color: #D90416;
+    color: #2d2d2d;
     background-color: white;
     font-size: 15px;
     font-weight: 800;
@@ -237,20 +241,23 @@ label p.checked {
     flex-wrap: wrap;
     justify-content: space-between;
     width:100%;
-    background-color: #69BFA0;
-    border-radius: 0% 0% 7% 7%;
+    background-color: #F25CA2;
+    border-radius: 10px;
     height:40px;
     color: white;
     
 }
 
 #add-item input{
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 0px 0px 0px 10px;
     border-style: none ;
     padding-left: 5%;
     width:70%;
-    background-color: #69BFA0;
+    background-color: #F25CA2;
     color: white;
+}
+#add-item input:focus {
+    outline: none;
 }
 
 #add-item ::placeholder {
@@ -266,11 +273,11 @@ label p.checked {
     float: right;
     color: white;
     font-size: 30px;
-    background-color: #69BFA0;
+    background-color: #F25CA2;
     border-style: none;
     padding-right:8%;
     
-    border-radius: 0px 0px 5px 0px;
+    border-radius: 0px 0px 7px 0px;
     
 }
 
