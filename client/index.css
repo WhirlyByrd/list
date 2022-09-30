@@ -108,6 +108,11 @@ main {
   
 }
 
+#add-list input:focus {
+    outline: none;
+    
+}
+
 #add-list button {
     width:20%;
     border-radius: 10px;

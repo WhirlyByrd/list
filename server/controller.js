@@ -1,8 +1,8 @@
 const lists = require('./db.json')
-let listId = 4
+let listId = 3
 
 const items = require('./db2.json')
-let itemId = 6
+let itemId = 5
 
 
 module.exports = {
