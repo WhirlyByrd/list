@@ -60,7 +60,7 @@ const createItemCard = (item) => {
 
     <p>${item.item}</p>
     </label>
-    
+
     <button onclick="deleteItem(${item.id})">X</button>
     
     
@@ -100,8 +100,11 @@ const getAllItems = () => {
         //filter get items from list id
         //higher order array methods to filter two tables
         res.data.filter(item => {
-            return item.listId === 1
+            // error from here I believe
+            return item.listId === 1 // what should it be equal to?
         })
+
+
         displayItems(res.data)
         console.log(res.data)
     })
@@ -116,6 +119,9 @@ const deleteList = (id) => {
     .then((res) => {
         showLists.innerHTML = ''
         displayLists(res.data)
+
+        // getAllLists()
+        // getAllItems()
     })
 }
 
