@@ -2,7 +2,7 @@ const lists = require('./db.json')
 let listId = 4
 
 const items = require('./db2.json')
-let itemId = 6
+let itemId = 7
 
 
 module.exports = {
@@ -26,17 +26,36 @@ module.exports = {
         res.status(200).send(lists)
     },
 
+    // deleteList: (req, res) => {
+    //     const index = lists.findIndex(el => el.id === +req.params.id)
+       
+    //     for( let i =0; i < items.length; i++) {
+    //         if(items[i].listId === +req.params.id){
+    //             items.splice(i, 1)
+    //         }
+    //     }
+
+    //     lists.splice(index, 1)
+        
+
+    //    res.status(200).send(lists)
+    // },
+
     deleteList: (req, res) => {
         const index = lists.findIndex(el => el.id === +req.params.id)
-       
-        // for( let i =0; i < items.length; i++) {
-        //     if(items.listId === req.params.id){
-        //         items.splice(i, 1)
-        //     }
-        // }
+        console.log(+req.params.id)
+
+        for( let i =0; i < items.length; i++) {
+            if(items[i].listId === +req.params.id){
+                items.splice(i, 1)
+                i--//
+            }
+        }
 
         lists.splice(index, 1)
         
+        console.log(lists)
+        console.log(items)
 
        res.status(200).send(lists)
     },

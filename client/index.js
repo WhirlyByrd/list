@@ -99,6 +99,8 @@ const getAllItems = () => {
     .then((res) => {
         //filter get items from list id
         //higher order array methods to filter two tables
+
+
         res.data.filter(item => {
             // error from here I believe
             return item.listId === 1 // what should it be equal to?
@@ -114,21 +116,46 @@ const getAllItems = () => {
 }
 
 //delete list
+// const deleteList = (id) => {
+//     axios.delete(`${baseUrl}/deleteList/${id}`)
+//     .then((res) => {
+//         res.data.filter(item => {
+//             // error from here I believe
+//             return item.listId === 1 // what should it be equal to?
+//         })
+        
+//         showLists.innerHTML = ''
+//         displayLists(res.data)
+
+//         // getAllLists()
+//         getAllItems()
+//     })
+// }
+
+
 const deleteList = (id) => {
     axios.delete(`${baseUrl}/deleteList/${id}`)
     .then((res) => {
+        // res.data.filter(item => {
+        //     // error from here I believe
+        //     return item.listId === 1 // what should it be equal to?
+        // })
+        
         showLists.innerHTML = ''
         displayLists(res.data)
-
-        // getAllLists()
-        // getAllItems()
+        
+        getAllItems()
     })
+
+    
 }
 
 // //delete item
 const deleteItem = (id) => {
     axios.delete(`${baseUrl}/deleteItem/${id}`)
     .then((res) => {
+        
+        
         showLists.innerHTML = ''
 
         getAllLists()
