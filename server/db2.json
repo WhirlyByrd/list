@@ -1,30 +1,30 @@
 [
     {
-        "listId": "1",
-        "id": "1",
+        "listId": 1,
+        "id": 1,
         "item":"Dishes"
     },
     {
-        "listId": "1",
-        "id": "2",
+        "listId": 1,
+        "id": 2,
         "item":"Sweep"
     },
 
     {
-        "listId": "1",
-        "id": "3",
+        "listId": 1,
+        "id" : 3,
         "item":"Mop"
     },
 
     {
-        "listId": "2",
-        "id": "4",
+        "listId": 2,
+        "id": 4,
         "item": "30min walk"
     },
 
     {
-        "listId": "2",
-        "id": "5",
+        "listId": 2,
+        "id": 5,
         "item": "5 sets of squats"
     }
 

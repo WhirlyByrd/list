@@ -55,16 +55,16 @@ const createItemCard = (item) => {
     <section id="itemRow">
     
     <label for=${item.id}>
+    
     <input onclick="updateStatus(this)" type=checkbox id="${item.id}">
+
     <p>${item.item}</p>
     </label>
+    
     <button onclick="deleteItem(${item.id})">X</button>
     
     
-    </section>
-
-
-    
+    </section>  
     `
     let showItems = document.querySelector(`#itemDisplay${item.listId}`)
     
@@ -128,7 +128,6 @@ const deleteItem = (id) => {
         getAllLists()
         getAllItems()
 
-        //displayItems(res.data)
     })
 }
 
@@ -169,7 +168,7 @@ const addItem = (listId) => {
         getAllLists()
         getAllItems()
 
-        //displayItems(res.data)
+        
     })
 
     

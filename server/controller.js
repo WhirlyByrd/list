@@ -1,8 +1,8 @@
 const lists = require('./db.json')
-let listId = 3
+let listId = 4
 
 const items = require('./db2.json')
-let itemId = 5
+let itemId = 6
 
 
 module.exports = {
@@ -48,7 +48,7 @@ module.exports = {
         const {item, key} = req.body
 
         let addItemObject = {
-            listId: `${key}`,
+            listId: key,
             id: itemId,
             item: `${item}`
         }
