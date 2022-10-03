@@ -3,6 +3,8 @@ const baseUrl = 'http://localhost:4875'
 //lists
 const showLists = document.querySelector('#listDisplay')
 const addListBtn = document.querySelector('#addListBtn')
+const nameInput = document.querySelector('#nameInput')
+
 
 //items
 let addItemBtn = ''
@@ -27,6 +29,7 @@ const displayItems = (itemArr) => {
 const createListCard = (list) => {
     const listCard = document.createElement('section')
     listCard.classList.add('list-card')
+    enterItem = document.querySelector('#itemInput')
 
     listCard.innerHTML = `
     <section id="list-name">
@@ -35,14 +38,16 @@ const createListCard = (list) => {
      <section id="itemDisplay${list.id}"></section>
 
      <section id="add-item">
-            <input type="text" id="itemInput${list.id}" placeholder="Add a new to-do"/>
+            <input type="text" id="itemInput${list.id}" placeholder="Add a new to-do" />
             <button id="addItemBtn" onclick="addItem(${list.id})">+</button>
     </section>  
     `
+
+
     
     showLists.appendChild(listCard)
     addItemBtn = document.querySelector('#addItemBtn')
-
+    
     
 }
 
@@ -71,6 +76,8 @@ const createItemCard = (item) => {
     showItems.appendChild(itemCard)
 }
 
+
+// updates whethere item is checked or not
 function updateStatus(selectedTask){
     //getting paragragh that contains item
     let itemName = selectedTask.parentElement.lastElementChild
@@ -115,22 +122,6 @@ const getAllItems = () => {
     })
 }
 
-//delete list
-// const deleteList = (id) => {
-//     axios.delete(`${baseUrl}/deleteList/${id}`)
-//     .then((res) => {
-//         res.data.filter(item => {
-//             // error from here I believe
-//             return item.listId === 1 // what should it be equal to?
-//         })
-        
-//         showLists.innerHTML = ''
-//         displayLists(res.data)
-
-//         // getAllLists()
-//         getAllItems()
-//     })
-// }
 
 
 const deleteList = (id) => {
@@ -177,7 +168,10 @@ const addList = () => {
         showLists.innerHTML = ''
         nameInput.value = ''
 
-        displayLists(res.data)
+        //displayLists(res.data)
+
+        getAllLists()
+        getAllItems()
     })
 }
 
@@ -185,8 +179,7 @@ const addList = () => {
 
 const addItem = (listId) => {
     let itemInput = document.querySelector(`#itemInput${listId}`)
-    
-
+ 
     let newItem = {
         key: listId,
         item: itemInput.value
@@ -200,7 +193,6 @@ const addItem = (listId) => {
 
         getAllLists()
         getAllItems()
-
         
     })
 
@@ -210,8 +202,16 @@ const addItem = (listId) => {
 
 
 addListBtn.addEventListener('click', addList)
-//addItemBtn.addEventListener('click', addItem)
+
+nameInput.addEventListener('keyup', function(event){
+    if(event.code === 'Enter') {
+        addList()
+    }
+} )
+
+
+
+
 
 getAllLists()
 getAllItems()
-//addItemBtn.addEventListener('click', addItem)
