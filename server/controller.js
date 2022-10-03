@@ -26,20 +26,7 @@ module.exports = {
         res.status(200).send(lists)
     },
 
-    // deleteList: (req, res) => {
-    //     const index = lists.findIndex(el => el.id === +req.params.id)
-       
-    //     for( let i =0; i < items.length; i++) {
-    //         if(items[i].listId === +req.params.id){
-    //             items.splice(i, 1)
-    //         }
-    //     }
-
-    //     lists.splice(index, 1)
-        
-
-    //    res.status(200).send(lists)
-    // },
+    // delete list
 
     deleteList: (req, res) => {
         const index = lists.findIndex(el => el.id === +req.params.id)
@@ -48,7 +35,7 @@ module.exports = {
         for( let i =0; i < items.length; i++) {
             if(items[i].listId === +req.params.id){
                 items.splice(i, 1)
-                i--//
+                i--// send index back by one else items will not populate
             }
         }
 
