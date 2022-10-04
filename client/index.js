@@ -109,8 +109,7 @@ const getAllItems = () => {
 
 
         res.data.filter(item => {
-            // error from here I believe
-            return item.listId === 1 // what should it be equal to?
+            return item.listId === 1 
         })
 
 
@@ -127,10 +126,7 @@ const getAllItems = () => {
 const deleteList = (id) => {
     axios.delete(`${baseUrl}/deleteList/${id}`)
     .then((res) => {
-        // res.data.filter(item => {
-        //     // error from here I believe
-        //     return item.listId === 1 // what should it be equal to?
-        // })
+    
         
         showLists.innerHTML = ''
         displayLists(res.data)
@@ -168,9 +164,9 @@ const addList = () => {
         showLists.innerHTML = ''
         nameInput.value = ''
 
-        //displayLists(res.data)
+        displayLists(res.data)
 
-        getAllLists()
+        //getAllLists()
         getAllItems()
     })
 }
@@ -208,9 +204,6 @@ nameInput.addEventListener('keyup', function(event){
         addList()
     }
 } )
-
-
-
 
 
 getAllLists()
