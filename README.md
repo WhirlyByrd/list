@@ -4,6 +4,8 @@ Learn more about the developer: https://www.linkedin.com/in/kara-gardner-48a0771
 
 This project was created for the DevMountain Foundations course. It is a website that allows the user to create and interact with multiple to-do lists. 
 
+Watch the demo:  https://youtu.be/wmXA-cNOT90
+
 ### Technology
 
 HTML5, CSS3, Javascript, AXIOS, Node.js, CORS, Express, JSON, Google Fonts API
