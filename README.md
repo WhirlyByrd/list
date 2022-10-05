@@ -26,3 +26,12 @@ HTML5, CSS3, Javascript, AXIOS, Node.js, CORS, Express, JSON, Google Fonts API
 
 5. Delete A List
 ⋅⋅* A list can also be removed by clicking the x button in the top right corner of the list by using an axios delete request with it’s specific list id. 
+
+
+### Screenshots
+
+![Main View](screenshots/mainView.png)
+![Items Checked/Crossed off](screenshots/ItemsCrossedOff.png)
+![Items Deleted](screenshots/itemsDeleted.png)
+![List Deleted](screenshots/listDeleted.png)
+![Responsive](screenshots/responsive.png)
